@@ -1,0 +1,120 @@
+{
+  "personal_info": {
+    "name": "Alapati Manikanta",
+    "title": "Computer Science Student & Android Developer",
+    "bio": "Final year Computer Science student passionate about mobile app development, machine learning, and creating innovative solutions. Currently working on STRIVE, an accident detection system using YOLOv9 for fire and vehicle accident detection.",
+    "location": "India",
+    "email": "alapati.manikanta.off@gmail.com",
+    "phone": "+91-8919698182",
+    "linkedin": "https://linkedin.com/in/alapati-manikanta",
+    "github": "https://github.com/MANI000PROF"
+  },
+  "skills": {
+    "programming_languages": [
+      "Java",
+      "Kotlin",
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "frameworks_tools": [
+      "Android Studio",
+      "Firebase",
+      "XML Layouts",
+      "PyQt",
+      "Qt Designer",
+      "YOLOv9",
+      "IntelliJ IDEA",
+      "VS Code"
+    ],
+    "areas_of_expertise": [
+      "Mobile App Development",
+      "Machine Learning",
+      "Object-Oriented Programming",
+      "Database Management",
+      "UI/UX Design"
+    ],
+    "currently_learning": [
+      "React.js",
+      "Node.js",
+      "Web Development",
+      "System Design"
+    ]
+  },
+  "projects": [
+    {
+      "name": "STRIVE - Accident Detection System",
+      "description": "AI-powered accident detection system using YOLOv9 to detect fires and vehicle accidents, automatically sending SMS alerts to emergency services",
+      "technologies": [
+        "Python",
+        "YOLOv9",
+        "PyQt",
+        "Qt Designer",
+        "Machine Learning"
+      ],
+      "features": [
+        "Real-time accident detection",
+        "Emergency SMS alerts",
+        "User-friendly GUI"
+      ],
+      "status": "Active Development"
+    },
+    {
+      "name": "Samarpan - Mobile App",
+      "description": "Android application developed with XML layouts and modern UI design principles",
+      "technologies": [
+        "Kotlin",
+        "XML",
+        "Android Studio",
+        "Firebase"
+      ],
+      "features": [
+        "Responsive UI",
+        "Firebase integration",
+        "Modern design"
+      ],
+      "status": "Completed"
+    },
+    {
+      "name": "Portfolio Website",
+      "description": "Modern, responsive portfolio website showcasing my projects and skills",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ],
+      "features": [
+        "Mobile-first design",
+        "Dark mode",
+        "Smooth animations"
+      ],
+      "status": "In Development"
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Technology in Computer Science",
+    "year": "Final Year (2025)",
+    "relevant_coursework": [
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "Database Management Systems",
+      "Computer Networks",
+      "Object-Oriented Programming"
+    ]
+  },
+  "achievements": [
+    "Developed social-impact mobile applications",
+    "Implementing cutting-edge AI/ML technologies",
+    "Preparing for technical interviews with major companies",
+    "Building projects with real-world applications"
+  ],
+  "interests": [
+    "Machine Learning & AI",
+    "Mobile App Development",
+    "Web Development",
+    "System Design",
+    "Open Source Contributions"
+  ]
+}
