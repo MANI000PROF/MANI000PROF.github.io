@@ -54,8 +54,8 @@ Simply visit the [live demo](https://mani000prof.github.io) to see the portfolio
 ### Option 2: Run Locally
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/yourusername.github.io.git
-   cd yourusername.github.io
+   git clone https://github.com/MANI000PROF/mani000prof.github.io.git
+   cd mani000prof.github.io
    ```
 
 2. **Open in browser**
