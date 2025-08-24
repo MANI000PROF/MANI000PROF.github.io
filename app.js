@@ -422,6 +422,196 @@ function initInteractiveAbout() {
     console.log('Interactive About Me section initialized successfully!');
 }
 
+// Global variable for current project data
+let currentProjectData = {
+    title: '',
+    description: '',
+    githubUrl: '',
+    downloadUrl: ''
+};
+
+// Initialize project modal functionality
+function initializeProjectModals() {
+    const clickableCards = document.querySelectorAll('.project-card[onclick]');
+    
+    clickableCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', 'View project options');
+        
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openProjectModal(this);
+            }
+        });
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeProjectModal();
+        }
+    });
+    
+    console.log('Project modals initialized successfully!');
+}
+
+// Open project modal
+function openProjectModal(projectCard) {
+    const title = projectCard.querySelector('.project-card__title').textContent;
+    const description = projectCard.querySelector('.project-card__description').textContent;
+    const githubUrl = projectCard.getAttribute('data-github');
+    const downloadUrl = projectCard.getAttribute('data-download');
+    
+    currentProjectData = {
+        title: title,
+        description: description,
+        githubUrl: githubUrl,
+        downloadUrl: downloadUrl
+    };
+    
+    document.getElementById('modalProjectTitle').textContent = title;
+    document.getElementById('modalProjectDescription').textContent = description;
+    
+    const downloadBtn = document.getElementById('modalDownloadBtn');
+    if (downloadUrl && downloadUrl.trim() !== '') {
+        downloadBtn.style.display = 'flex';
+    } else {
+        downloadBtn.style.display = 'none';
+    }
+    
+    const modal = document.getElementById('projectModal');
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close project modal
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+    
+    currentProjectData = {
+        title: '',
+        description: '',
+        githubUrl: '',
+        downloadUrl: ''
+    };
+}
+
+// Visit GitHub repository
+function visitGitHub() {
+    if (!currentProjectData.githubUrl) {
+        showNotification('GitHub link not available', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('modalGithubBtn');
+    btn.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        btn.style.transform = 'scale(1)';
+    }, 150);
+    
+    showNotification('Opening GitHub repository...', 'info');
+    window.open(currentProjectData.githubUrl, '_blank', 'noopener,noreferrer');
+    
+    setTimeout(() => {
+        closeProjectModal();
+    }, 500);
+}
+
+// Download application
+function downloadApp() {
+    if (!currentProjectData.downloadUrl) {
+        showNotification('Download not available', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('modalDownloadBtn');
+    btn.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        btn.style.transform = 'scale(1)';
+    }, 150);
+    
+    showNotification('Starting download...', 'success');
+    
+    const downloadLink = document.createElement('a');
+    downloadLink.href = currentProjectData.downloadUrl;
+    downloadLink.download = '';
+    downloadLink.style.display = 'none';
+    
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    
+    setTimeout(() => {
+        closeProjectModal();
+    }, 1000);
+}
+
+// Show notification popup
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    
+    let icon = '🔗';
+    if (type === 'success') icon = '✅';
+    else if (type === 'error') icon = '❌';
+    
+    notification.innerHTML = `
+        <span style="margin-right: 8px;">${icon}</span>
+        <span>${message}</span>
+    `;
+    
+    let bgColor = 'linear-gradient(135deg, #3b82f6, #2563eb)';
+    if (type === 'success') bgColor = 'linear-gradient(135deg, #10b981, #059669)';
+    else if (type === 'error') bgColor = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${bgColor};
+        color: white;
+        padding: 12px 18px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        z-index: 10000;
+        font-size: 14px;
+        font-weight: 500;
+        animation: slideInRight 0.3s ease, slideOutRight 0.3s ease 2.7s forwards;
+        pointer-events: none;
+        max-width: 280px;
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 3000);
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initializeProjectModals();
+});
+
+// Close modal when clicking outside
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('projectModal');
+    if (modal && modal.classList.contains('show')) {
+        if (e.target.classList.contains('project-modal__backdrop')) {
+            closeProjectModal();
+        }
+    }
+});
+
+
 // clickable skill cards
 function openSkillWebsite(url, skillName) {
     const skillCard = event.currentTarget;

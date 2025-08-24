@@ -341,7 +341,11 @@
                 </div>
                 
                 <div class="projects__grid">
-                    <div class="project-card" data-category="ai mobile">
+                    <div class="project-card" 
+                        data-category="ai mobile"
+                        data-github="https://github.com/MANI000PROF/STRIVE"
+                        data-download="https://github.com/MANI000PROF/STRIVE/releases/download/v1.0.0/STRIVE.exe"
+                        onclick="openProjectModal(this)">
                         <div class="project-card__image">
                             <div class="project-card__placeholder">STRIVE</div>
                         </div>
@@ -358,7 +362,11 @@
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="mobile">
+                    <div class="project-card" 
+                        data-category="mobile"
+                        data-github="https://github.com/MANI000PROF/SAMARPAN"
+                        data-download="https://github.com/MANI000PROF/SAMARPAN/releases/download/v1.0.0/samarpan.apk"
+                        onclick="openProjectModal(this)">
                         <div class="project-card__image">
                             <div class="project-card__placeholder">SAMARPAN</div>
                         </div>
@@ -489,6 +497,37 @@
             </div>
         </div>
     </footer>
+
+    <!-- Project Options Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal__backdrop" onclick="closeProjectModal()"></div>
+        <div class="project-modal__content">
+            <div class="project-modal__header">
+                <h3 id="modalProjectTitle" class="project-modal__title"></h3>
+                <button class="project-modal__close" onclick="closeProjectModal()" aria-label="Close modal">×</button>
+            </div>
+            <div class="project-modal__body">
+                <p id="modalProjectDescription" class="project-modal__description"></p>
+                <div class="project-modal__actions">
+                    <button id="modalGithubBtn" class="project-action-btn project-action-btn--primary" onclick="visitGitHub()">
+                        <span class="btn-icon">🔗</span>
+                        <div class="btn-content">
+                            <span class="btn-title">View on GitHub</span>
+                            <span class="btn-subtitle">Source code & details</span>
+                        </div>
+                    </button>
+                    
+                    <button id="modalDownloadBtn" class="project-action-btn project-action-btn--secondary" onclick="downloadApp()">
+                        <span class="btn-icon">⬇️</span>
+                        <div class="btn-content">
+                            <span class="btn-title">Download App</span>
+                            <span class="btn-subtitle">Ready to install</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
