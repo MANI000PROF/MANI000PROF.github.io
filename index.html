@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALAPATI MANIKANTA - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -100,110 +101,15 @@
                     <p class="section__subtitle">Get to know me better</p>
                 </div>
                 
-                <div class="about__content">
-                    <div class="about__text">
-                        <p>
-                            I'm a passionate innovator and technology researcher dedicated to creating 
-                            <span class="interactive-text" data-tooltip="ai-solutions">AI solutions that make a meaningful impact on human lives</span>. 
-                            With experience developing 
-                            <span class="interactive-text" data-tooltip="current-skills">Python-based AI systems and Android applications</span>, 
-                            my current focus has evolved toward an ambitious frontier: integrating 
-                            <span class="interactive-text" data-tooltip="generative-ai">generative AI into intelligent monitoring systems</span> 
-                            that understand and enhance human behavior.
-                        </p>
-                        
-                        <p>
-                            Currently, I'm pioneering research into AI-powered daily activity monitoring systems that go beyond simple tracking 
-                            to provide genuinely intelligent, emotionally-aware guidance. This cutting-edge research combines real-time behavioral 
-                            analytics with advanced generative AI to create systems that not only observe daily activities but understand the 
-                            emotional and psychological context behind human actions.
-                        </p>
-                        
-                        <p>
-                            What sets this work apart is our focus on 
-                            <span class="interactive-text" data-tooltip="emotional-ai">emotional intelligence integration</span>—developing 
-                            AI that can think more practically than humans in many scenarios while remaining grounded in realistic, empathetic 
-                            understanding of human behavior. The goal is to create systems that analyze patterns in daily activities and suggest 
-                            personalized best practices that users can realistically implement, addressing the growing challenge of behavioral 
-                            control in our digital age.
-                        </p>
-                        
-                        <div class="research-applications">
-                            <h4>Potential Research Applications:</h4>
-                            <ul class="research-list">
-                                <li><span class="interactive-text" data-tooltip="financial-research">Financial wellness management through AI-powered personal advisory systems</span></li>
-                                <li><span class="interactive-text" data-tooltip="health-research">Real-time health monitoring with predictive behavioral interventions</span></li>
-                                <li><span class="interactive-text" data-tooltip="social-research">Social media behavioral optimization</span> to combat the negative impacts of digital overconsumption</li>
-                                <li><span class="interactive-text" data-tooltip="lifestyle-research">Personalized lifestyle coaching</span> that adapts to individual emotional states and circumstances</li>
-                            </ul>
-                        </div>
-                        
-                        <p>
-                            This research sits at the intersection of 
-                            <span class="interactive-text" data-tooltip="interdisciplinary">machine learning, behavioral psychology, and human-computer interaction</span>, 
-                            representing the next evolution in how AI can serve as a truly intelligent companion in our daily lives. By developing 
-                            systems that combine the analytical power of AI with genuine understanding of human emotional needs, I'm working toward 
-                            a future where technology enhances rather than disrupts our natural behavioral patterns.
-                        </p>
-                        
-                        <p>
-                            The interdisciplinary nature of this work requires deep understanding of AI/ML algorithms, real-time data processing, 
-                            behavioral analytics, and human psychology—a challenge I'm passionate about tackling to create solutions that could 
-                            revolutionize personal wellness management across industries.
-                        </p>
-                        
-                        <div class="about__education">
-                            <h3>Education</h3>
-                            <div class="about__degree">
-                                <h4>Bachelor of Technology in Computer Science</h4>
-                                <span class="about__year">Final Year (2025 - 26)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="about__interests">
-                            <h3>Current Interests</h3>
-                            <ul class="about__interests-list">
-                                <li>Machine Learning & AI</li>
-                                <li>Application Development</li>
-                                <li>Cloud Computing</li>
-                                <li>System Design</li>
-                                <li>Data Science</li>
-                            </ul>
-                        </div>
+                <div id="about-container" class="bento-grid"></div>
+            </div>
+        </section>
 
-                        <!-- Tooltip Container -->
-                        <div id="tooltip" class="tooltip">
-                            <div class="tooltip__header">
-                                <span class="tooltip__icon"></span>
-                                <h4 class="tooltip__title"></h4>
-                            </div>
-                            <div class="tooltip__content">
-                                <p class="tooltip__text"></p>
-                            </div>
-                            <div class="tooltip__arrow"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="about__stats">
-                        <div class="stats">
-                            <div class="stat">
-                                <div class="stat__number">3+</div>
-                                <div class="stat__label">Projects Completed</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">6+</div>
-                                <div class="stat__label">Technologies</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">2026</div>
-                                <div class="stat__label">Expected Graduation</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">100%</div>
-                                <div class="stat__label">Dedication</div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Tech Marquee Section -->
+        <section class="tech-marquee-section">
+            <div class="marquee-container">
+                <div class="marquee-track" id="marquee-track">
+                    <!-- Dynamic Marquee items inject here -->
                 </div>
             </div>
         </section>
@@ -212,116 +118,22 @@
         <section class="skills" id="skills">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Skills & Technologies</h2>
-                    <p class="section__subtitle">Technologies I work with</p>
+                    <h2 class="section__title">Technical Arsenal</h2>
+                    <p class="section__subtitle">Tools and technologies I command</p>
                 </div>
-                
-                <div class="skills__content">
-                    <div class="skills__category">
-                        <h3 class="skills__category-title">Programming Languages</h3>
-                        <div class="skills__list">
-                            <div class="skill" data-level="80">
-                                <div class="skill__info">
-                                    <span class="skill__name">Java</span>
-                                    <span class="skill__percentage">80%</span>
-                                </div>
-                                <div class="skill__bar">
-                                    <div class="skill__progress" style="width: 80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill" data-level="85">
-                                <div class="skill__info">
-                                    <span class="skill__name">Kotlin</span>
-                                    <span class="skill__percentage">85%</span>
-                                </div>
-                                <div class="skill__bar">
-                                    <div class="skill__progress" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill" data-level="90">
-                                <div class="skill__info">
-                                    <span class="skill__name">Python</span>
-                                    <span class="skill__percentage">90%</span>
-                                </div>
-                                <div class="skill__bar">
-                                    <div class="skill__progress" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill" data-level="75">
-                                <div class="skill__info">
-                                    <span class="skill__name">JavaScript</span>
-                                    <span class="skill__percentage">75%</span>
-                                </div>
-                                <div class="skill__bar">
-                                    <div class="skill__progress" style="width: 75%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skills__category">
-                        <h3 class="skills__category-title">Frameworks & Tools</h3>
-                        <div class="skills__grid">
-                            <div class="skill-card skill-card--clickable" onclick="openSkillWebsite('https://developer.android.com/studio', 'Android Studio')" data-skill="Android Studio">
-                                <span class="skill-card__name">Android Studio</span>
-                                <div class="skill-card__overlay">
-                                    <span class="skill-card__link-icon">🔗</span>
-                                    <span class="skill-card__action">Visit Official Site</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-card skill-card--clickable" onclick="openSkillWebsite('https://firebase.google.com/', 'Firebase')" data-skill="Firebase">
-                                <span class="skill-card__name">Firebase</span>
-                                <div class="skill-card__overlay">
-                                    <span class="skill-card__link-icon">🔗</span>
-                                    <span class="skill-card__action">Visit Official Site</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-card skill-card--clickable" onclick="openSkillWebsite('https://riverbankcomputing.com/software/pyqt/', 'PyQt')" data-skill="PyQt">
-                                <span class="skill-card__name">PyQt</span>
-                                <div class="skill-card__overlay">
-                                    <span class="skill-card__link-icon">🔗</span>
-                                    <span class="skill-card__action">Visit Official Site</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-card skill-card--clickable" onclick="openSkillWebsite('https://github.com/WongKinYiu/yolov9', 'YOLOv9')" data-skill="YOLOv9">
-                                <span class="skill-card__name">YOLOv9</span>
-                                <div class="skill-card__overlay">
-                                    <span class="skill-card__link-icon">🔗</span>
-                                    <span class="skill-card__action">Visit GitHub Repo</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-card skill-card--clickable" onclick="openSkillWebsite('https://developers.google.com/', 'Google APIs')" data-skill="Google APIs">
-                                <span class="skill-card__name">Google APIs</span>
-                                <div class="skill-card__overlay">
-                                    <span class="skill-card__link-icon">🔗</span>
-                                    <span class="skill-card__action">Visit Developer Site</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-card skill-card--clickable" onclick="openSkillWebsite('https://opencv.org/', 'OpenCV')" data-skill="OpenCV">
-                                <span class="skill-card__name">OpenCV</span>
-                                <div class="skill-card__overlay">
-                                    <span class="skill-card__link-icon">🔗</span>
-                                    <span class="skill-card__action">Visit Official Site</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Dynamic Bento Skills Container -->
+                <div id="skills-container" class="bento-grid skills-bento"></div>
+            </div>
+        </section>
 
-                    <div class="skills__category">
-                        <h3 class="skills__category-title">Currently Learning</h3>
-                        <div class="skills__learning">
-                            <span class="learning-tag">React.js</span>
-                            <span class="learning-tag">Node.js</span>
-                            <span class="learning-tag">Web Development</span>
-                            <span class="learning-tag">System Design</span>
-                        </div>
-                    </div>
+        <!-- Timeline Section -->
+        <section class="timeline" id="experience">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Journey</h2>
+                    <p class="section__subtitle">Education & Milestones</p>
                 </div>
+                <div id="timeline-container" class="timeline-container"></div>
             </div>
         </section>
 
@@ -333,72 +145,12 @@
                     <p class="section__subtitle">Some of my recent work</p>
                 </div>
                 
-                <div class="projects__filters">
-                    <button class="filter-btn filter-btn--active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <div class="projects__filters" id="projects-filters">
+                    <!-- Dynamic filters -->
                 </div>
                 
-                <div class="projects__grid">
-                    <div class="project-card" 
-                        data-category="ai mobile"
-                        data-github="https://github.com/MANI000PROF/STRIVE"
-                        data-download="https://github.com/MANI000PROF/STRIVE/releases/download/v1.0.0/STRIVE.exe"
-                        onclick="openProjectModal(this)">
-                        <div class="project-card__image">
-                            <div class="project-card__placeholder">STRIVE</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">STRIVE - Accident Detection System</h3>
-                            <p class="project-card__description">AI-powered accident detection system using YOLOv9 to detect fires and vehicle accidents, automatically sending SMS alerts to emergency services.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">YOLOv9</span>
-                                <span class="tech-tag">PyQt</span>
-                                <span class="tech-tag">ML</span>
-                            </div>
-                            <div class="project-card__status status status--success">Completed</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" 
-                        data-category="mobile"
-                        data-github="https://github.com/MANI000PROF/SAMARPAN"
-                        data-download="https://github.com/MANI000PROF/SAMARPAN/releases/download/v1.0.0/samarpan.apk"
-                        onclick="openProjectModal(this)">
-                        <div class="project-card__image">
-                            <div class="project-card__placeholder">SAMARPAN</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Samarpan - Mobile App</h3>
-                            <p class="project-card__description">Android application developed with XML layouts and modern UI design principles, featuring responsive UI and Firebase integration.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">Kotlin</span>
-                                <span class="tech-tag">XML</span>
-                                <span class="tech-tag">Android Studio</span>
-                                <span class="tech-tag">Firebase</span>
-                            </div>
-                            <div class="project-card__status status status--success">Completed</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="web">
-                        <div class="project-card__image">
-                            <div class="project-card__placeholder">PORTFOLIO</div>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Portfolio Website</h3>
-                            <p class="project-card__description">Modern, responsive portfolio website showcasing projects and skills with mobile-first design and dark mode support.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Responsive</span>
-                            </div>
-                            <div class="project-card__status status status--info">In Development</div>
-                        </div>
-                    </div>
+                <div class="projects__grid" id="projects-container">
+                    <!-- Dynamic projects -->
                 </div>
             </div>
         </section>
@@ -529,6 +281,7 @@
         </div>
     </div>
 
+    <script src="renderers.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

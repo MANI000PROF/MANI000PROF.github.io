@@ -1,14 +1,36 @@
 {
   "personal_info": {
     "name": "Alapati Manikanta",
-    "title": "Computer Science Student & Android Developer",
-    "bio": "Final year Computer Science student passionate about mobile app development, machine learning, and creating innovative solutions. Currently working on STRIVE, an accident detection system using YOLOv9 for fire and vehicle accident detection.",
-    "location": "India",
+    "title": "Computer Science Student & Application Developer",
+    "bio": "I'm a passionate innovator and technology researcher dedicated to creating AI solutions that make a meaningful impact on human lives. With experience developing Python-based AI systems and Android applications, my current focus has evolved toward a new frontier: integrating generative AI into intelligent monitoring systems.",
+    "location": "Hyderabad, India",
     "email": "alapati.manikanta.off@gmail.com",
     "phone": "+91-8919698182",
     "linkedin": "https://linkedin.com/in/alapati-manikanta",
     "github": "https://github.com/MANI000PROF"
   },
+  "research_focus": [
+    {
+      "title": "Emotional Intelligence in AI",
+      "icon": "💝",
+      "description": "Developing AI that understands and responds to human emotional states through behavioral analysis, creating emotionally aware systems."
+    },
+    {
+      "title": "Health & Wellness Interventions",
+      "icon": "🏥",
+      "description": "Researching AI systems that monitor daily activities and predict health issues before they become serious through behavioral analytics."
+    },
+    {
+      "title": "Financial Personal Advisory",
+      "icon": "💰",
+      "description": "Developing AI that can analyze spending patterns, predict financial stress, and provide personalized advice for financial wellness."
+    },
+    {
+      "title": "Digital Wellness",
+      "icon": "📱",
+      "description": "Detecting unhealthy overconsumption patterns and recommending interventions to improve mental health."
+    }
+  ],
   "skills": {
     "programming_languages": [
       "Java",
@@ -16,7 +38,8 @@
       "Python",
       "JavaScript",
       "HTML",
-      "CSS"
+      "CSS",
+      "C++"
     ],
     "frameworks_tools": [
       "Android Studio",
@@ -25,96 +48,96 @@
       "PyQt",
       "Qt Designer",
       "YOLOv9",
-      "IntelliJ IDEA",
-      "VS Code"
-    ],
-    "areas_of_expertise": [
-      "Mobile App Development",
-      "Machine Learning",
-      "Object-Oriented Programming",
-      "Database Management",
-      "UI/UX Design"
+      "OpenCV",
+      "Git",
+      "Figma"
     ],
     "currently_learning": [
       "React.js",
       "Node.js",
       "Web Development",
-      "System Design"
+      "System Design",
+      "Generative AI"
     ]
   },
+  "timeline": [
+    {
+      "year": "2025 - 2026",
+      "title": "CoB-FA (Cognitive Behavioral Financial Advisor)",
+      "institution": "Final Year Project",
+      "description": "An Android personal finance app combining tracking, budgeting, and AI behavioral insights for mindful spending.",
+      "image": "./images/projects/cobfa.png"
+    },
+    {
+      "year": "2024",
+      "title": "STRIVE Accident Detection System",
+      "institution": "Independent Project",
+      "description": "Developed an AI-powered system using YOLOv9 for real-time fire and vehicle accident detection.",
+      "image": "./images/projects/strive.png"
+    },
+    {
+      "year": "2023",
+      "title": "Samarpan Mobile App",
+      "institution": "Android Development",
+      "description": "Created an Android application with Firebase integration focusing on modern UI design principles.",
+      "image": "./images/projects/samarpan.png"
+    }
+  ],
   "projects": [
     {
+      "name": "CoB-FA",
+      "description": "Cognitive Behavioral Financial Advisor is an Android personal finance application combining expense tracking, budgeting, analytics, and AI-powered behavioral insights. Uses a local-first privacy approach.",
+      "technologies": [
+        "Android",
+        "AI Analytics",
+        "Mobile App"
+      ],
+      "status": "Version v1.0.0",
+      "github": "https://github.com/MANI000PROF/CoB-FA",
+      "download": "https://github.com/MANI000PROF/CoB-FA/releases/download/v1.0.0/CoB-FA-v1.0.0.apk",
+      "image": "./images/projects/cobfa_logo.png"
+    },
+    {
       "name": "STRIVE - Accident Detection System",
-      "description": "AI-powered accident detection system using YOLOv9 to detect fires and vehicle accidents, automatically sending SMS alerts to emergency services",
+      "description": "AI-powered accident detection system using YOLOv9 to detect fires and vehicle accidents, automatically sending SMS alerts to emergency services.",
       "technologies": [
         "Python",
         "YOLOv9",
         "PyQt",
-        "Qt Designer",
         "Machine Learning"
       ],
-      "features": [
-        "Real-time accident detection",
-        "Emergency SMS alerts",
-        "User-friendly GUI"
-      ],
-      "status": "Active Development"
+      "status": "Completed",
+      "github": "https://github.com/MANI000PROF/STRIVE",
+      "download": "https://github.com/MANI000PROF/STRIVE/releases/download/v1.0.0/STRIVE.exe",
+      "image": "./images/projects/strive_logo.png"
     },
     {
       "name": "Samarpan - Mobile App",
-      "description": "Android application developed with XML layouts and modern UI design principles",
+      "description": "Android application developed with XML layouts and modern UI design principles. Features responsive UI and Firebase integration.",
       "technologies": [
         "Kotlin",
         "XML",
         "Android Studio",
         "Firebase"
       ],
-      "features": [
-        "Responsive UI",
-        "Firebase integration",
-        "Modern design"
-      ],
-      "status": "Completed"
+      "status": "Completed",
+      "github": "https://github.com/MANI000PROF/SAMARPAN",
+      "download": "https://github.com/MANI000PROF/SAMARPAN/releases/download/v1.0.0/samarpan.apk",
+      "image": "./images/projects/samarpan_logo.jpg"
     },
     {
-      "name": "Portfolio Website",
-      "description": "Modern, responsive portfolio website showcasing my projects and skills",
+      "name": "Next-Gen Portfolio Website",
+      "description": "Modern, interactive portfolio dynamically constructed from JSON data, featuring custom JS renderers, and bento-box layouts.",
       "technologies": [
-        "HTML",
-        "CSS",
+        "HTML5",
+        "CSS3",
         "JavaScript",
-        "Responsive Design"
+        "JSON",
+        "UI/UX Design"
       ],
-      "features": [
-        "Mobile-first design",
-        "Dark mode",
-        "Smooth animations"
-      ],
-      "status": "In Development"
+      "status": "Completed",
+      "github": "https://github.com/MANI000PROF/self-portfolio",
+      "download": ""
     }
-  ],
-  "education": {
-    "degree": "Bachelor of Technology in Computer Science",
-    "year": "Final Year (2025)",
-    "relevant_coursework": [
-      "Data Structures & Algorithms",
-      "Operating Systems",
-      "Database Management Systems",
-      "Computer Networks",
-      "Object-Oriented Programming"
-    ]
-  },
-  "achievements": [
-    "Developed social-impact mobile applications",
-    "Implementing cutting-edge AI/ML technologies",
-    "Preparing for technical interviews with major companies",
-    "Building projects with real-world applications"
-  ],
-  "interests": [
-    "Machine Learning & AI",
-    "Mobile App Development",
-    "Web Development",
-    "System Design",
-    "Open Source Contributions"
   ]
 }

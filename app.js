@@ -1,24 +1,49 @@
 // Portfolio Website JavaScript
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
+document.addEventListener('DOMContentLoaded', async function() {
+    // Phase 1: Dynamic Data Loading
+    await loadPortfolioData();
+    
+    // Core functional initializations
     initThemeToggle();
     initMobileMenu();
     initScrollEffects();
-    initProjectFilters();
-    initContactForm();
-    initSkillAnimations();
     initSmoothScrolling();
-    initInteractiveAbout();
+    
+    // Re-bind actions post-render
+    if (typeof initializeProjectModals === 'function') initializeProjectModals();
+    
+    // Safe-call previously direct-call items
+    if (typeof initContactForm === 'function') initContactForm();
 });
+
+async function loadPortfolioData() {
+    try {
+        const response = await fetch('portfolio_data.json');
+        if (!response.ok) throw new Error('Data load failed');
+        const data = await response.json();
+        
+        // Use modular render functions to construct UI
+        renderAboutAndResearch(data);
+        renderSkills(data);
+        renderTimeline(data);
+        renderProjects(data);
+        renderTechMarquee(data);
+        
+        // Setup newly rendered dynamic filter buttons
+        initProjectFiltersDynamic();
+    } catch (error) {
+        console.error('Portfolio data initialization error:', error);
+    }
+}
 
 // Theme Toggle Functionality
 function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
     
-    // Check for saved theme or default to light
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme or default to dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-color-scheme', currentTheme);
     updateThemeIcon(currentTheme);
     
@@ -730,37 +755,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Project Filtering
-function initProjectFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const filterValue = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('filter-btn--active'));
-            this.classList.add('filter-btn--active');
-            
-            // Filter projects
-            projectCards.forEach(card => {
-                const cardCategories = card.getAttribute('data-category');
-                
-                if (filterValue === 'all' || cardCategories.includes(filterValue)) {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.classList.add('animate-in');
-                    }, 100);
-                } else {
-                    card.style.display = 'none';
-                    card.classList.remove('animate-in');
-                }
-            });
-        });
-    });
-}
+// Note: Project filtering is now handled dynamically by initProjectFiltersDynamic()
 
 // Contact Info Interaction - Add interactive functionality and effects
 function openEmail() {
