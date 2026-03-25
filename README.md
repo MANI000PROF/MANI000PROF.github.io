@@ -1,49 +1,42 @@
-# 🚀 Personal Portfolio Website
+# 🚀 Next-Gen Personal Portfolio
 
-A modern, responsive portfolio website showcasing my projects, skills, and professional journey. Built with clean HTML, CSS, and JavaScript with interactive features and mobile-first design.
+A premium, data-driven portfolio website showcasing my projects, skills, and professional journey. Built natively with HTML, CSS, and JavaScript, it features a highly modular JSON-backed architecture, beautiful glassmorphism, and a responsive bento-box grid design.
 
 ## 🌟 Live Demo
 
 **[View Live Portfolio](https://mani000prof.github.io)**
 
-## 📸 Preview
+## ✨ Premium Features
 
-<!-- Add screenshots here when you take them -->
-*Screenshots coming soon - showcasing desktop and mobile views*
-
-## ✨ Features
-
-- **🎨 Modern Design** - Clean, professional interface with smooth animations
-- **📱 Fully Responsive** - Optimized for all devices and screen sizes
-- **⚡ Interactive Elements** - Hover effects, smooth scrolling, and dynamic content
-- **🔗 Project Modals** - Click project cards to view GitHub repos and download apps
-- **💡 Interactive About Section** - Hover tooltips revealing research interests and skills
-- **🌐 Cross-Browser Compatible** - Works seamlessly across all modern browsers
-- **♿ Accessible** - Built with accessibility best practices
-- **🚀 Fast Loading** - Optimized performance and lightweight assets
+- **🧠 Data-Driven Architecture** - Entire portfolio content is modularized in `portfolio_data.json` for instant updates without touching HTML.
+- **🎨 Native Glassmorphism** - Frosted glass styling with ambient glows, strictly implemented without heavy external frameworks.
+- **🍱 Bento-Box Grids** - Modern, asymmetrical layout design for the about and research sections.
+- **🌓 Dual Theme Supremacy** - Defaults to a stunning deep-slate Dark Mode, with a strict, high-contrast Light Mode toggle.
+- **📱 Fully Responsive** - Optimized flawlessly for all devices and screen sizes.
+- **⚡ Dynamic Rendering Engine** - Core UI is dynamically injected via `renderers.js` for lightweight performance.
+- **🔗 Project Modals & Infinite Marquee** - Animated tech stack scroll and detailed modal popups for GitHub/downloads.
 
 ## 🛠️ Technologies Used
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Styling:** CSS Grid, Flexbox, Custom Properties (CSS Variables)
-- **Icons & Emojis:** Font icons and Unicode emojis
+- **Frontend Core:** HTML5, Modern CSS3, Vanilla JavaScript (ES6+)
+- **Architecture:** JSON DOM Injection, Asynchronous Fetch
+- **Styling:** Vanilla CSS, native DOM manipulation, custom properties (Variables), `@media (prefers-color-scheme)`
 - **Hosting:** GitHub Pages
-- **Version Control:** Git & GitHub
 
 ## 📂 Project Structure
 
-```
+```text
 portfolio/
-├── index.html              # Main HTML file
-├── styles/
-│   └── style.css          # Main stylesheet with responsive design
-├── scripts/
-│   └── app.js             # JavaScript functionality and interactions
-├── images/
-│   ├── profile-photo.jpg  # Profile picture
-│   └── projects/          # Project screenshots
-├── README.md              # Project documentation
-└── .gitignore            # Git ignore rules
+├── index.html              # Main HTML skeletal structure
+├── portfolio_data.json     # 100% of website content (Source of Truth)
+├── style.css               # Base styles and color variables
+├── custom.css              # Premium glassmorphism, bento grids, & light/dark modes
+├── app.js                  # Core interactions, scroll effects, and theme toggling
+├── renderers.js            # Modular JS engine that populates HTML from JSON
+├── images/                 
+│   ├── mani.jpg            # Profile picture
+│   └── projects/           # High-res project logos and screenshots
+└── README.md               # Project documentation
 ```
 
 ## 🔧 Setup & Installation
@@ -52,105 +45,47 @@ portfolio/
 Simply visit the [live demo](https://mani000prof.github.io) to see the portfolio in action.
 
 ### Option 2: Run Locally
+Since the portfolio securely fetches data from a local JSON file, it requires a basic local server to bypass browser CORS restrictions.
+
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/MANI000PROF/mani000prof.github.io.git
-   cd mani000prof.github.io
+   git clone https://github.com/MANI000PROF/MANI000PROF.github.io.git
+   cd MANI000PROF.github.io
    ```
 
-2. **Open in browser**
+2. **Start a local server** 
    ```bash
-   # Option A: Direct file opening
-   open index.html
-   
-   # Option B: Using Python server (recommended)
+   # Using Python (Windows/Mac/Linux)
    python -m http.server 8000
-   # Then visit: http://localhost:8000
    
-   # Option C: Using Node.js server
+   # Or using Node.js
    npx serve
    ```
 
-3. **Start developing**
-   - Edit HTML in `index.html`
-   - Modify styles in `styles/style.css`
-   - Add functionality in `scripts/app.js`
+3. **Open in browser**
+   Visit `http://localhost:8000`
 
-## 🎯 Key Sections
+## 🔄 Making Updates (Zero-Code Content Management)
 
-- **🏠 Hero Section** - Eye-catching introduction with profile photo and call-to-action
-- **👨‍💻 About Me** - Interactive tooltips revealing research interests and technical background
-- **💼 Projects** - Filterable project showcase with modal popups for GitHub/downloads
-- **🛠️ Skills** - Technical competencies and tools
-- **📧 Contact** - Multiple ways to get in touch
+Thanks to the customized data-driven architecture, you can update almost everything **without touching a single line of HTML or CSS**.
 
-## 🔄 Making Updates
-
-### Adding New Projects
-1. Update the projects section in `index.html`
-2. Add project images to `images/projects/`
-3. Include GitHub repository links and download URLs
-4. Test the modal functionality
-
-### Customizing Styles
-- Modify CSS variables in `:root` for theme colors
-- Update responsive breakpoints in media queries
-- Customize animations and transitions
-
-### Adding New Features
-- Extend JavaScript functionality in `scripts/app.js`
-- Follow existing code patterns for consistency
-- Test across different browsers and devices
+1. Open `portfolio_data.json`
+2. Add a new object to the `"projects"` array or `"timeline"` array.
+3. Add any new skill tags to the `"skills"` lists.
+4. Save and refresh. The website will automatically render the new containers, generate the correct borders, and rebuild the animated filters!
 
 ## 🚀 Deployment
 
 This portfolio is automatically deployed using GitHub Pages:
 
-1. **Push changes** to the main branch
-2. **GitHub Pages** automatically rebuilds the site
-3. **Live updates** appear within 1-5 minutes
-4. **Custom domain** can be configured in repository settings
+1. **Commit your changes:** `git commit -am "Update portfolio data"`
+2. **Push to the main branch:** `git push origin main`
+3. **GitHub Pages** automatically rebuilds the site
+4. **Live updates** appear within 1-2 minutes.
 
-## 🎨 Customization
-
-### Color Scheme
-The website uses CSS custom properties for easy theming:
-```css
-:root {
-  --color-primary: #3b82f6;
-  --color-secondary: #8b5cf6;
-  --color-background: #ffffff;
-  --color-text: #1f2937;
-}
-```
-
-### Adding Your Information
-1. Replace placeholder content in `index.html`
-2. Update profile photo in `images/profile-photo.jpg`
-3. Modify GitHub repository links in project cards
-4. Customize the about section with your background
-
-## 📱 Browser Support
-
-- ✅ Chrome (90+)
-- ✅ Firefox (88+)
-- ✅ Safari (14+)
-- ✅ Edge (90+)
-- ✅ Mobile browsers
-
-## 🤝 Contributing
-
-While this is a personal portfolio, feedback and suggestions are welcome!
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'Add some improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
+## 🤝 Contributing & License
+This is a personal portfolio repository, but the source code is open for inspiration! 
+Available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
@@ -161,15 +96,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - 📧 **Email:** alapati.manikanta.off@gmail.com
 - 🐱 **GitHub:** [@MANI000PROF](https://github.com/MANI000PROF)
 
-## 🙏 Acknowledgments
-
-- Icons and emojis for visual enhancement
-- Modern CSS techniques and best practices
-- Inspiration from contemporary portfolio designs
-- GitHub Pages for free hosting
-
 ---
 
-⭐ **Star this repo** if you found it helpful!
-
-*Last updated: August 2025*
+⭐ **Star this repo** if you found the architecture helpful!
+*Last updated: March 2026*
