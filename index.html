@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NVN4B9GW');</script>
+    <!-- End Google Tag Manager -->
+
     <title>ALAPATI MANIKANTA - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="custom.css">
 </head>
+
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVN4B9GW" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header/Navigation -->
     <header class="header">
         <nav class="nav container">
             <div class="nav__brand">
                 <a href="#home" class="nav__logo">ALAPATI MANIKANTA</a>
             </div>
-            
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -33,18 +49,18 @@
                         <a href="#contact" class="nav__link">Contact</a>
                     </li>
                 </ul>
-                
+
                 <div class="nav__close" id="nav-close">
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            
+
             <div class="nav__actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
                     <span class="theme-toggle__icon">🌙</span>
                 </button>
-                
+
                 <div class="nav__toggle" id="nav-toggle">
                     <span></span>
                     <span></span>
@@ -63,14 +79,15 @@
                         <span class="hero__greeting">Hello, I'm</span>
                         <h1 class="hero__name">ALAPATI MANIKANTA</h1>
                         <h2 class="hero__title">Computer Science Student & Application Developer</h2>
-                        <p class="hero__description">Final year Computer Science student passionate about mobile app development, machine learning, and creating innovative solutions.</p>
-                        
+                        <p class="hero__description">Final year Computer Science student passionate about mobile app
+                            development, machine learning, and creating innovative solutions.</p>
+
                         <div class="hero__buttons">
                             <a href="#contact" class="btn btn--primary">Get In Touch</a>
                             <a href="#projects" class="btn btn--outline">View Projects</a>
                         </div>
                     </div>
-                    
+
                     <div class="hero__image">
                         <div class="hero__avatar">
                             <img src="./images/mani.jpg" alt="Manikanta Alapati - Portfolio Photo" class="hero__photo">
@@ -83,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero__scroll">
                     <a href="#about" class="hero__scroll-link">
                         <span>Scroll Down</span>
@@ -100,7 +117,7 @@
                     <h2 class="section__title">About Me</h2>
                     <p class="section__subtitle">Get to know me better</p>
                 </div>
-                
+
                 <div id="about-container" class="bento-grid"></div>
             </div>
         </section>
@@ -144,11 +161,11 @@
                     <h2 class="section__title">Featured Projects</h2>
                     <p class="section__subtitle">Some of my recent work</p>
                 </div>
-                
+
                 <div class="projects__filters" id="projects-filters">
                     <!-- Dynamic filters -->
                 </div>
-                
+
                 <div class="projects__grid" id="projects-container">
                     <!-- Dynamic projects -->
                 </div>
@@ -189,17 +206,19 @@
                                 <p>Hyderabad, India</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact__social">
                             <h4>Follow Me</h4>
                             <div class="social__links">
-                                <a href="https://linkedin.com/in/alapati-manikanta" class="social__link" target="_blank">LinkedIn</a>
+                                <a href="https://linkedin.com/in/alapati-manikanta" class="social__link"
+                                    target="_blank">LinkedIn</a>
                                 <a href="https://github.com/MANI000PROF" class="social__link" target="_blank">GitHub</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <form class="contact__form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                    <form class="contact__form" id="contact-form" action="https://api.web3forms.com/submit"
+                        method="POST">
 
                         <input type="hidden" name="access_key" value="e936ec1f-c9cb-46e2-9398-152b27a88930">
                         <input type="hidden" name="subject" value="New Portfolio Message">
@@ -208,24 +227,24 @@
                             <label for="name" class="form-label">Name</label>
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
                             <input type="text" id="subject" name="subject" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
                             <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
-                        
+
                         <div class="form-message" id="form-message"></div>
                     </form>
                 </div>
@@ -261,15 +280,17 @@
             <div class="project-modal__body">
                 <p id="modalProjectDescription" class="project-modal__description"></p>
                 <div class="project-modal__actions">
-                    <button id="modalGithubBtn" class="project-action-btn project-action-btn--primary" onclick="visitGitHub()">
+                    <button id="modalGithubBtn" class="project-action-btn project-action-btn--primary"
+                        onclick="visitGitHub()">
                         <span class="btn-icon">🔗</span>
                         <div class="btn-content">
                             <span class="btn-title">View on GitHub</span>
                             <span class="btn-subtitle">Source code & details</span>
                         </div>
                     </button>
-                    
-                    <button id="modalDownloadBtn" class="project-action-btn project-action-btn--secondary" onclick="downloadApp()">
+
+                    <button id="modalDownloadBtn" class="project-action-btn project-action-btn--secondary"
+                        onclick="downloadApp()">
                         <span class="btn-icon">⬇️</span>
                         <div class="btn-content">
                             <span class="btn-title">Download App</span>
@@ -284,4 +305,5 @@
     <script src="renderers.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
